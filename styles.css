@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: rgb(29, 136, 29);
+    text-align: center;
+    font-size: 300%;
+    font-style: italic;
+    animation: slidewave-left 6s linear infinite;
+}
+h4{
+    color: rgb(2, 63, 2);
+    font-size: 300%;
+    font-style: italic;
+}
+
+/* body {
+    background-color: #f0f0f0;
+} */
+
+.flag-animation {
+    height: 500px;
+    width: 700px;
+    background: url('p5.png');
+    background-size: cover;
+    background-position: center;
+    margin: 5% auto;
+    position: relative;
+    transform: skewY(-10deg);
+    /* border: 1px solid red; Temporary border for visualization */
+}
+
+.wave-down, .wave-up {
+    display: block; /* Ensure images are visible */
+    position: absolute;
+    width: 100%; /* Ensure images are within the div */
+}
+
+.wave-down {
+    bottom: -50px;
+    right: 0;
+    position: absolute;
+    animation: slidewave-down 6s linear infinite;
+}
+
+.wave-up {
+    top: -50px;
+    right: 0;
+    position: absolute;
+    animation: slidewave-up 6s linear infinite;
+}
+
+@keyframes slidewave-down{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(700px); }
+}
+
+@keyframes slidewave-up {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-700px); }
+}
+@keyframes slidewave-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX( 700px); }
+}
+
